@@ -31,6 +31,7 @@
         "https://*.janeapp.com/*"
       ],
       "js": [
+        "config.js",
         "utils/waitForElement.js",
         "utils/setNativeValue.js",
         "utils/findByText.js",

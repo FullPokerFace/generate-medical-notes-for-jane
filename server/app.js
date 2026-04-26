@@ -16,6 +16,10 @@ app.use((req, res, next) => {
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+app.get('/', (req, res) => {
+    res.json({ status: 'ok', message: 'AI Notes for Jane server is running' });
+});
+
 // POST /generate-soap
 // Body: { subjective, objective, assessment, plan }
 // Returns: { subjective, objective, assessment, plan }
@@ -68,6 +72,10 @@ Return JSON only, no extra text.
     res.json(result);
 });
 
-app.listen(port, () => {
-    console.log(`AI Notes for Jane server running at http://localhost:${port}`);
-});
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`AI Notes for Jane server running at http://localhost:${port}`);
+    });
+}
+
+module.exports = app;

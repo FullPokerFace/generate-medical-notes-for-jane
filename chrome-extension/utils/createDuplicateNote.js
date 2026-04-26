@@ -19,7 +19,7 @@ async function createDuplicateNote() {
     console.log('[AI Notes for Jane] Sending to server for AI generation…');
     let newSoap;
     try {
-        const response = await fetch('http://localhost:3009/generate-soap', {
+        const response = await fetch(`${AIN_SERVER_URL}/generate-soap`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(currentSoap),
