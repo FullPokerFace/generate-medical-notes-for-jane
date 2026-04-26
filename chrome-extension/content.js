@@ -42,7 +42,12 @@ function injectOverlay() {
             <button id="ain-toggle" class="ain-toggle" title="Collapse">−</button>
         </div>
         <div id="ain-body" class="ain-body">
-            <button id="ain-generate" class="ain-button ain-button-secondary">Generate Notes</button>
+            <label class="ain-label" for="ain-therapist-comments">Therapist comments</label>
+            <textarea id="ain-therapist-comments" class="ain-textarea" placeholder="Enter comments for the AI..."></textarea>
+            <button id="ain-generate" class="ain-button ain-button-secondary">
+                <span class="ain-spinner" id="ain-spinner"></span>
+                <span id="ain-generate-label">Generate Notes</span>
+            </button>
             <div id="ain-status" class="ain-status"></div>
         </div>
     `;

@@ -64,6 +64,33 @@
 }
 
 
+.ain-label {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: -4px;
+}
+
+.ain-textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    resize: vertical;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.ain-textarea:focus {
+    outline: 2px solid #259ECA;
+    border-color: #259ECA;
+}
+
 .ain-button {
     background-color: #259ECA;
     color: white;
@@ -91,8 +118,24 @@
 }
 
 .ain-button:disabled {
-    background-color: #94a3b8;
+    opacity: 0.7;
     cursor: not-allowed;
+}
+
+.ain-spinner {
+    display: none;
+    width: 13px;
+    height: 13px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: ain-spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes ain-spin {
+    to { transform: rotate(360deg); }
 }
 
 .ain-status {

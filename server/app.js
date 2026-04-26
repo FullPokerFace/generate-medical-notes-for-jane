@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.post('/generate-soap', async (req, res) => {
     console.log('[Server] req.body:', JSON.stringify(req.body, null, 2));
 
-    const { subjective, objective, assessment, plan } = req.body;
+    const { subjective, objective, assessment, plan, therapistComments } = req.body;
 
     if (!subjective && !objective && !assessment && !plan) {
         return res.status(400).json({ error: 'At least one SOAP field is required.' });
@@ -37,8 +37,9 @@ app.post('/generate-soap', async (req, res) => {
     console.log('  Objective:', objective);
     console.log('  Assessment:', assessment);
     console.log('  Plan:', plan);
+    console.log('  Therapist comments:', therapistComments);
 
-    const doctorComments = 'The patient has shown approximately 10% improvement since the last session.';
+    const doctorComments = therapistComments || 'No additional comments provided.';
 
     const prompt = `
 You are a physiotherapy assistant. Rewrite the SOAP note below based on the doctor's comments.

@@ -1,3 +1,13 @@
+function setGenerating(on) {
+    const btn = document.getElementById('ain-generate');
+    const label = document.getElementById('ain-generate-label');
+    const spinner = document.getElementById('ain-spinner');
+    if (!btn) return;
+    btn.disabled = on;
+    if (label) label.textContent = on ? 'Generating summary…' : 'Generate Notes';
+    if (spinner) spinner.style.display = on ? 'inline-block' : 'none';
+}
+
 async function createDuplicateNote() {
     console.log('[AI Notes for Jane] Starting createDuplicateNote…');
 
@@ -15,14 +25,17 @@ async function createDuplicateNote() {
     console.log('[AI Notes for Jane] Reading current SOAP field values…');
     const currentSoap = getSoapFields();
 
+    const therapistComments = document.getElementById('ain-therapist-comments')?.value?.trim() || '';
+
     // Step 5: send to server, get AI-generated SOAP back
     console.log('[AI Notes for Jane] Sending to server for AI generation…');
     let newSoap;
+    setGenerating(true);
     try {
         const response = await fetch(`${AIN_SERVER_URL}/generate-soap`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(currentSoap),
+            body: JSON.stringify({ ...currentSoap, therapistComments }),
         });
         const raw = await response.json();
         // Normalize keys to lowercase
@@ -33,6 +46,8 @@ async function createDuplicateNote() {
     } catch (err) {
         console.error('[AI Notes for Jane] Server request failed:', err.message);
         return;
+    } finally {
+        setGenerating(false);
     }
 
     // Step 6: fill fields with AI-generated content
