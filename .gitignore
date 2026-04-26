@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.zip
+server/node_modules
+server/.env
+server/.env.example

@@ -1,0 +1,110 @@
+/* AI Notes for Jane — injected overlay styles */
+
+.ain-overlay-class {
+    position: fixed;
+    top: 0px;
+    right: 350px;
+    padding: 20px;
+    border-radius: 0 0 0 1rem;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    z-index: 9999;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-color: #94a3b8 #e2e8f0;
+    scrollbar-width: thin;
+    max-height: 90vh;
+    max-width: 320px;
+    width: 320px;
+    overflow: auto;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.ain-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 700;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.ain-toggle {
+    background: transparent;
+    border: 1px solid #94a3b8;
+    color: #475569;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.ain-toggle:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.ain-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+
+.ain-button {
+    background-color: #259ECA;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 10px 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.ain-button:hover {
+    background-color: #1a7fa3;
+}
+
+.ain-button-secondary {
+    background-color: #ffffff;
+    color: #259ECA;
+    border: 2px solid #259ECA;
+}
+
+.ain-button-secondary:hover {
+    background-color: #e0f2fe;
+}
+
+.ain-button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+.ain-status {
+    color: #0369a1;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 16px;
+    text-align: center;
+}
+
+/* Highlight filled fields */
+.ain-highlight {
+    outline: 2px solid #259ECA !important;
+    background-color: rgba(37, 158, 202, 0.08) !important;
+}
