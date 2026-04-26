@@ -10,7 +10,8 @@
     "tabs"
   ],
   "host_permissions": [
-    "https://*.janeapp.com/*"
+    "https://*.janeapp.com/*",
+    "https://generate-medical-notes-for-jane.vercel.app/*"
   ],
   "action": {
     "default_popup": "popup.html",
