@@ -91,6 +91,88 @@
     border-color: #259ECA;
 }
 
+.ain-select-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.ain-select-row .ain-select {
+    flex: 1;
+}
+
+.ain-icon-btn {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.4rem;
+    color: #475569;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.ain-icon-btn:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.ain-select {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    padding: 7px 10px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.ain-select:focus {
+    outline: 2px solid #259ECA;
+    border-color: #259ECA;
+}
+
+.ain-preset-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: -4px;
+}
+
+.ain-button-ghost {
+    background: transparent;
+    border: 1px solid #94a3b8;
+    border-radius: 0.4rem;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.ain-button-ghost:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+.ain-button-ghost-danger {
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+.ain-button-ghost-danger:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
 .ain-button {
     background-color: #259ECA;
     color: white;
@@ -144,6 +226,91 @@
     font-weight: 500;
     min-height: 16px;
     text-align: center;
+}
+
+/* Comments modal */
+.ain-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ain-modal {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    width: 400px;
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.ain-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    flex-shrink: 0;
+}
+
+.ain-modal-list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.ain-modal-empty {
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.ain-modal-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.ain-modal-item:last-child {
+    border-bottom: none;
+}
+
+.ain-modal-item-text {
+    flex: 1;
+    font-size: 13px;
+    color: #1e293b;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.ain-modal-delete {
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.ain-modal-add {
+    padding: 16px 20px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
 }
 
 /* Highlight filled fields */

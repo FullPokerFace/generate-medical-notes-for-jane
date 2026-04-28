@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Notes for Jane — Install</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      max-width: 540px;
+      width: 100%;
+      padding: 40px;
+    }
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: #259ECA;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .subtitle { color: #64748b; font-size: 15px; margin-bottom: 32px; }
+    .btn {
+      display: inline-block;
+      background: #259ECA;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 8px;
+      margin-bottom: 36px;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #1a7fa3; }
+    h2 { font-size: 15px; font-weight: 700; margin-bottom: 12px; color: #1e293b; }
+    ol { padding-left: 20px; }
+    ol li {
+      font-size: 14px;
+      color: #475569;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    ol li strong { color: #1e293b; }
+    .note {
+      margin-top: 28px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+    code {
+      background: #e2e8f0;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🩺</div>
+    <h1>AI Notes for Jane</h1>
+    <p class="subtitle">Chrome extension that auto-generates SOAP notes on janeapp.com</p>
+
+    <a class="btn" href="/chrome-extension.zip" download>Download Extension (.zip)</a>
+
+    <h2>Installation Instructions</h2>
+    <ol>
+      <li><strong>Download</strong> the zip file using the button above.</li>
+      <li><strong>Unzip</strong> the file — right-click → <em>Extract All</em>. You'll get a folder called <code>chrome-extension</code>.</li>
+      <li>Open Chrome and go to <code>chrome://extensions</code>.</li>
+      <li>Enable <strong>Developer mode</strong> using the toggle in the top-right corner.</li>
+      <li>Click <strong>Load unpacked</strong> and select the <code>chrome-extension</code> folder you just unzipped.</li>
+      <li>Navigate to any <strong>janeapp.com</strong> page — the panel will appear automatically in the top-right corner.</li>
+    </ol>
+
+    <div class="note">
+      <strong>Note:</strong> Because this extension is not published on the Chrome Web Store, you must keep Developer mode enabled. Do not remove the unzipped folder — Chrome loads the extension directly from it.
+    </div>
+  </div>
+</body>
+</html>

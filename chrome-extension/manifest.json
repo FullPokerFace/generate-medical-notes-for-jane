@@ -40,6 +40,7 @@
         "utils/clickDuplicateMenuItem.js",
         "utils/fillSoapFields.js",
         "utils/createDuplicateNote.js",
+        "utils/presets.js",
         "content.js"
       ],
       "css": [
