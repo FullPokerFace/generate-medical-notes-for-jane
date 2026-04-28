@@ -2,10 +2,13 @@ require('dotenv').config({ path: '.env.example' });
 const express = require('express');
 const OpenAI = require('openai');
 
+const path = require('path');
+
 const app = express();
 const port = 3009;
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Allow requests from the Chrome extension
 app.use((req, res, next) => {
@@ -15,10 +18,6 @@ app.use((req, res, next) => {
 });
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-app.get('/', (req, res) => {
-    res.json({ status: 'ok', message: 'AI Notes for Jane server is running' });
-});
 
 // POST /generate-soap
 // Body: { subjective, objective, assessment, plan }
