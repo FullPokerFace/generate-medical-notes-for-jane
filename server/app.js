@@ -42,7 +42,7 @@ app.post('/generate-soap', async (req, res) => {
 
     const prompt = `
 You are a physiotherapy assistant. Rewrite the SOAP note below based on the doctor's comments.
-Use simple, clear language. Keep it concise. Return ONLY a valid JSON object with keys: subjective, objective, assessment, plan.
+Use simple, clear language. Keep it concise, but keep all the details. Please match the writing style. Return ONLY a valid JSON object with keys: subjective, objective, assessment, plan.
 
 Doctor's comments: ${doctorComments}
 
